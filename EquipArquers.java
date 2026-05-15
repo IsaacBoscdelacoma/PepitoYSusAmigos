@@ -1,7 +1,7 @@
 public class EquipArquers extends Equip {
     public EquipArquers(String nom) {
         super(nom);
-        personatges.add(new Arquer("Arquer A ("+nom+")"));
-        personatges.add(new Arquer("Arquer B ("+nom+")"));
+        personatges.add(new Arquer("Elowen"));
+        personatges.add(new Arquer("Thalion"));
     }
 }

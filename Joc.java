@@ -14,8 +14,8 @@ public class Joc {
     }
 
     public void crearEquips() {
-        combatents.afegir(new EquipArquers("Equip arquers A"));
-        combatents.afegir(new EquipArquers("Equip arquers B"));
-        combatents.afegir(new EquipArquers("Equip arquers C"));
+        combatents.afegir(new EquipArquers("Equip arquers"));
+        combatents.afegir(new EquipArquerIGuerrer("Equip mixt"));
+        combatents.afegir(new EquipGuerrers("Equip guerrers"));
     }
 }
