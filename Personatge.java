@@ -23,7 +23,7 @@ public abstract class Personatge {
     abstract public void atacar(Personatge oponent);
 
     protected void atacarAmbMal(Personatge oponent, int mal) {
-        System.out.println(this.getNom() + " ataca a " + oponent + " i li llança " + mal + " punts de mal");
+        UI.mostrarFerAtac(this, oponent, mal);
         if (estaViu) {
             oponent.rebreMal(mal);
         }
@@ -31,12 +31,10 @@ public abstract class Personatge {
 
     public void rebreMal(int mal) {
         vidaActual = vidaActual - mal;
-        System.out.println(this.getNom() + " ha estat atacat, ara té " + vidaActual + " de vida.");
-        System.out.println();
         if (vidaActual <=0) {
             estaViu = false;
-            System.out.println(this.getNom() + " ha mort.");
         }
+        UI.mostrarRebreAtac(this, vidaActual, estaViu);
     }
 
     public boolean esViu() {

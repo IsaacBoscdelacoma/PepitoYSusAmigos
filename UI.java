@@ -19,4 +19,15 @@ public class UI {
             i++;
         }
     }
+
+    public static void mostrarFerAtac(Personatge atacant, Personatge atacat, int mal) {
+        System.out.println(atacant.getNom() + " ataca a " + atacat.getNom() + " i li llança " + mal + " punts de mal");
+    }
+
+    public static void mostrarRebreAtac(Personatge p, int vidaActual, boolean viu) {
+        System.out.println(p.getNom() + " ha estat atacat, ara té " + vidaActual + " de vida.");
+        if (!viu) {
+            System.out.println(p.getNom() + " ha mort.");
+        }
+    }
 }
