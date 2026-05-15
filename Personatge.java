@@ -23,19 +23,21 @@ public abstract class Personatge {
     abstract public void atacar(Personatge oponent);
 
     protected void atacarAmbMal(Personatge oponent, int mal) {
-        UI.mostrarFerAtac(this, oponent, mal);
         if (estaViu) {
+            UI.mostrarFerAtac(this, oponent, mal);
             oponent.rebreMal(mal);
             malFet = malFet + mal;
         }
     }
 
     public void rebreMal(int mal) {
-        vidaActual = vidaActual - mal;
-        if (vidaActual <=0) {
-            estaViu = false;
+        if (estaViu) {
+            vidaActual = vidaActual - mal;
+            if (vidaActual <=0) {
+                estaViu = false;
+            }
+            UI.mostrarRebreAtac(this, vidaActual, estaViu);
         }
-        UI.mostrarRebreAtac(this, vidaActual, estaViu);
     }
 
     public boolean esViu() {
