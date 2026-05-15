@@ -51,7 +51,16 @@ public abstract class Personatge {
         return malFet;
     }
 
-    public String toString() {
+    public String getVidaOMort() {
+        if (estaViu) {
+            return Integer.toString(vidaActual);
+        }
+        else {
+            return("mort");
+        }
+    }
+
+    public String getNom() {
         return nom;
     }
 }
