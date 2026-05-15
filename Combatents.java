@@ -17,10 +17,10 @@ public class Combatents {
         }
     }
 
-    public ArrayList<Personatge> obtenirPersonatgesVius() {
+    public ArrayList<Personatge> obtenirPersonatges() {
         ArrayList<Personatge> personatgesVius = new ArrayList<>();
         for (Equip e : equips) {
-            personatgesVius.addAll(e.obtenirPersonatgesVius());
+            personatgesVius.addAll(e.obtenirPersonatges());
         }
         return personatgesVius;
     }

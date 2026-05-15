@@ -15,7 +15,7 @@ public abstract class Personatge {
     }
 
     public void torn(Combatents combatents) {
-        ArrayList<Personatge> oponents = combatents.obtenirPersonatgesVius();
+        ArrayList<Personatge> oponents = combatents.obtenirPersonatges();
         Personatge oponent = UI.escollirOponent(this, oponents);
         atacar(oponent);
     }

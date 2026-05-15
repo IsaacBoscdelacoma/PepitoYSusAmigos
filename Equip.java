@@ -22,13 +22,11 @@ public abstract class Equip {
         }
     }
 
-    public ArrayList<Personatge> obtenirPersonatgesVius() {
-        ArrayList<Personatge> personatgesVius = new ArrayList<>();
+    public ArrayList<Personatge> obtenirPersonatges() {
+        ArrayList<Personatge> personatges = new ArrayList<>();
         for (Personatge p : personatges) {
-            if (p.esViu()) {
-                personatgesVius.add(p);
-            }
+            personatges.add(p);
         }
-        return personatgesVius;
+        return personatges;
     }
 }
