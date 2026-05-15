@@ -5,7 +5,7 @@ public class UI {
     public static Scanner entrada = new Scanner(System.in);
 
     public static Personatge escollirOponent(Personatge atacant, ArrayList<Personatge> personatges) {
-        System.out.println(atacant + ", atent!");
+        System.out.println(atacant.getNom() + ", atent!");
         mostrarPersonatgesIVida(personatges);
         System.out.println("Escull a qui vols atacar:");
         int escollit = entrada.nextInt();

@@ -9,11 +9,6 @@ public abstract class Equip {
         personatges = new ArrayList<>();
     }
 
-    @Override
-    public String toString() {
-        return nom;
-    }
-
     public void torn(Combatents combatents) {
         for (Personatge p : personatges) {
             if (p.esViu()) {
