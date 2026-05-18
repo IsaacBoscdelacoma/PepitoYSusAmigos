@@ -1,7 +1,7 @@
 public class Morthex extends Personatge {
 
-    public Morthex(String nom) {
-        super(nom);
+    public Morthex(String nom, Equip equip) {
+        super(nom, equip);
     }
 
     public void atacar(Personatge oponent) {
