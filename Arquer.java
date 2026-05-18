@@ -10,9 +10,8 @@ public class Arquer extends Personatge {
         rondesPendentsPerFabricar = 0;
     }
 
-    // TO DO: Repensar aquest mètode, ja que no sempre ataca.
     @Override
-    public void atacar(Personatge oponent) {
+    public void ferAccio(Personatge oponent) {
         if (potAtacar()) {
             int mal = Dau.tirar(20) + 20;
             atacarAmbMal(oponent, mal);
