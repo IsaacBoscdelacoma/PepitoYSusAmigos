@@ -5,7 +5,7 @@ public class Puado extends Personatge {
     }
 
     @Override
-    public void atacar(Personatge oponent) {
+    public void ferAccio(Personatge oponent) {
         int tirada = Dau.tirar(3);
 
         int mal;

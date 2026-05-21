@@ -32,6 +32,20 @@ public class UI {
         }
     }
 
+    public static String escollirAccio(Personatge personatge) {
+        System.out.println();
+        System.out.println("És el torn de " + personatge.getNom() + " (" + personatge.getVidaOMort() + ")");
+        System.out.println("Què vol fer " + personatge.getNom() + "?");
+        System.out.println("  1. Atacar");
+        System.out.println("  2. Curar-se");
+        int opcio = entrada.nextInt();
+        return opcio == 2 ? "curar" : "atacar";
+    }
+
+    public static void mostrarCuracio(Personatge p, int vida, int vidaActual) {
+        System.out.println(p.getNom() + " es cura " + vida + " punts de vida. Vida actual: " + vidaActual);
+    }
+
     public static void mostrarFi(ArrayList<Personatge> personatges) {
         System.out.println();
         System.out.println("Estadístiques finals:");

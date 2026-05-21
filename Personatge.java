@@ -32,6 +32,13 @@ public abstract class Personatge {
         }
     }
 
+    public void curar(int vida) {
+        if (estaViu) {
+            vidaActual = vidaActual + vida;
+            UI.mostrarCuracio(this, vida, vidaActual);
+        }
+    }
+
     public void rebreMal(int mal) {
         if (estaViu) {
             vidaActual = vidaActual - mal;
